@@ -12,20 +12,20 @@ https://tensorflow-object-detection-api-tutorial.readthedocs.io/en/latest/traini
 
 https://medium.com/iuc-bilgisayar-kulubu/training-custom-object-detector-step-by-step-4ef47bc2cb03
 
-STEPS:
--------
-1. Create Project directory:
+### STEPS:
+----------
+###1. Create Project directory:
 ------------------------------------
 - Create a project folder named "Object_Detection_tensorflow" and create a virtual environment named "objectdet" by using the below command.
 $ python3 -m venv ./objectdet
 $ source objectdet/bin/activate
 
-2. Clone the tensorflow object detection repository:
+###2. Clone the tensorflow object detection repository:
 ------------------------------------------------------
 $ git clone https://github.com/tensorflow/models
 
 
-3. Download system specific protobuf zip folder:
+###3. Download system specific protobuf zip folder:
 --------------------------------------------------
 Download system specific protobuf zip folder from "https://github.com/protocolbuffers/protobuf/releases"
 
@@ -48,7 +48,7 @@ and then goto models/research folder and run below:
 
 $ ./protoc object_detection/protos/*.proto --python_out=.
 
-4. Install the tensorflow object detection api and also verifying the installation:
+###4. Install the tensorflow object detection api and also verifying the installation:
 -------------------------------------------------------------------------------------
 $ cp object_detection/packages/tf2/setup.py .
 $ python -m pip install .
@@ -66,7 +66,7 @@ Then type below command:
 $ pip install --upgrade "protobuf<=3.20.1"
 
 
-5. Create dataset:
+###5. Create dataset:
 ---------------------
 - Downloaded the SVT scene text dataset from kaggle "https://www.kaggle.com/datasets/nageshsingh/the-street-view-text-dataset"
 - copy and extract the zip folder into "SVT_Text_dataset" folder.
@@ -91,7 +91,7 @@ $ pip install --upgrade "protobuf<=3.20.1"
 - run "xml_to_csv_svt.py" script, this will create 2 csv files as required.
 $ python xml_to_csv_svt.py
 
-6. create tf_record format of generated dataset:
+###6. create tf_record format of generated dataset:
 --------------------------------------------------
 - create a folder named "tf_records" under models/research folder.
 
@@ -103,7 +103,7 @@ $ python generate_tfrecord.py --csv_input=/home/ashwini/my_git_projects/Object_D
 
 Note: change the line no 34 according to the dataset labels.(as it is text detection problem the label is "text")
 
-7. Training the model using transfer learning:
+###7. Training the model using transfer learning:
 --------------------------------------------------
 - Create "training" folder under models/research/object_detection folder.
 
@@ -127,11 +127,11 @@ Note: above training will take too much time on low end configuration systems
 
 above training will create the checkpoints under --model_dir folder.
 
-8. Visualization of training on tensorboard:
+###8. Visualization of training on tensorboard:
 --------------------------------------------------
-9.  Exporting the checkpoint to ob file.
+###9.  Exporting the checkpoint to ob file.
 --------------------------------------------------
-10. Converting pb to lite format i.e tflite for embedded or android devices.
+###10. Converting pb to lite format i.e tflite for embedded or android devices.
 --------------------------------------------------------------------------------
 
 
