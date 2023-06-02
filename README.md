@@ -129,7 +129,7 @@ above training will create the checkpoints under --model_dir folder.
 
 ###8. Visualization of training on tensorboard:
 --------------------------------------------------
-###9.  Exporting the checkpoint to ob file.
+###9.  Exporting the checkpoint to pb file.
 --------------------------------------------------
 ###10. Converting pb to lite format i.e tflite for embedded or android devices.
 --------------------------------------------------------------------------------
